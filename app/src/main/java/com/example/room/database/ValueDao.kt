@@ -8,8 +8,8 @@ import androidx.room.Query
 interface ValueDao {
 
     @Insert
-    fun insert(value: Value)
+    suspend fun insert(value: Value)
 
-    @Query("SELECT * FROM value_table ORDER BY value DESC LIMIT 1")
-    fun getValue(): Value?
+    @Query("SELECT * FROM value_table ORDER BY value DESC")
+    fun getAllValues(): List<Value>?
 }

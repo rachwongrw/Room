@@ -28,6 +28,7 @@ class AddValueActivity : AppCompatActivity() {
                 replyIntent.putExtra(EXTRA_REPLY, editValueView.text.toString())
                 setResult(Activity.RESULT_OK, replyIntent)
             }
+            finish()
         }
     }
 
