@@ -23,7 +23,9 @@ class MainActivity : AppCompatActivity() {
 
         if (requestCode == 1 && resultCode == Activity.RESULT_OK) {
             intentData?.getStringExtra(AddValueActivity.EXTRA_REPLY)?.let { reply ->
+                // add to db
                 val value = reply
+                // get from db
             }
         } else {
             Toast.makeText(applicationContext, "Must provide valid value", Toast.LENGTH_LONG).show()
